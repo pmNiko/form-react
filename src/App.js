@@ -1,25 +1,19 @@
 import React, {useState} from 'react';
 import './App.css';
-import "./components/Header/Header";
-import "./components/Register"
+
+import Header from './components/Header/Header';
+import Register from './components/Register';
 
 function App() {
-  // uso de use state
-  // dentro de una funcion no uso use states
-  // current state, modificador
-  //  useState[0] -> valor de elemento
-  //  useState[1] -> fn modificadora
-  
   return (
     <div className="contador-fluid">
-        {/* <Header/> */}
-        <div className="row">
-          <div className="col-6">
-            <h2>todos el listado de los usuarios</h2>
+        <Header/>
+        <div className="row mt-5 justify-content-center ">
+          <div className="col-4">
+            <Register/>
           </div>
-          <div className="col-6">
-            <h2>todos los inputs</h2>
-            {/* <Register/> */}
+          <div className="col-4">
+            usuarios
           </div>
         </div>
     </div>
@@ -27,3 +21,6 @@ function App() {
 }
 
 export default App;
+
+
+

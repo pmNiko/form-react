@@ -1,0 +1,53 @@
+import React, {useState} from 'react';
+import './App.css';
+// import "./components/Header/Header";
+// import "./components/Register"
+
+function App() {
+  // uso de use state
+  // dentro de una funcion no uso use states
+  // current state, modificador
+  //  useState[0] -> valor de elemento
+  //  useState[1] -> fn modificadora
+
+  // --- Hooks de estado --//
+  // const [clicks, setClicks] = useState(0);
+  // const [input, setInput] = useState("");
+  const [state, setState] = useState({
+    contador: 0,
+    name: ''
+  })
+  
+  // Manejadores de eventos
+  const handlerCounter = () => {
+    // setClicks(clicks+1);
+    // uso el spreed ...state, para no pisar las otras propiedades
+    setState({...state, contador: state.contador + 1})
+  }
+
+  const handlerInput = (e) => {
+    // destructuring del evento 
+    const {value : nombre} = e.target;
+    // console.log(e.nativeEvent);
+    // modifico el estado con el value del evento
+    // setInput(nombre);
+    setState({...state, name:  nombre})
+  }
+
+
+  return (
+    <div className="contador-fluid">
+        <h1 className="display-4">Eventos</h1>
+        <button className="button" onClick={handlerCounter}>
+          Contador: {state.contador}
+        </button>
+        <input type="text" className="form-control" 
+          placeholder="Input" onChange={handlerInput}
+          value= {state.name}
+        />
+    </div>
+  );
+}
+
+export default App;
+

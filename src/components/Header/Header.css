@@ -1,4 +1,6 @@
 .colorHeader {
-    color: red;
-    font-size: 12px;
+    color: white;
+    font-size: 20px;
+    background-color: brown;
+    padding: 3px;
 }
