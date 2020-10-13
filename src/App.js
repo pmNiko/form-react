@@ -17,10 +17,14 @@ function App() {
     setUsers([...users, usuario])
   }
   // quitar un usuario de la colección
-  const removeUser = (usuario) => {
-    console.log(usuario);
+  const removeUser = (idUser) => {
+    if (window.confirm("Esta seguro que desea eliminar el usuario?")){
+      setUsers(users.filter(user => {
+          return user.id !== idUser;
+        })
+      )
+    }
   }
-
 
   // render del componente principal
   return (
@@ -28,7 +32,7 @@ function App() {
         <Header/>
         <div className="row mt-5 justify-content-center ">
           <div className="col-4">
-            <Register addUsers= {addUser}/>
+            <Register addUser= {addUser}/>
           </div>
           
           <div className="col-4">
