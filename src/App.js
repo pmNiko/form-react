@@ -31,11 +31,11 @@ function App() {
     <div className="contador-fluid">
         <Header/>
         <div className="row mt-5 justify-content-center ">
-          <div className="col-4">
+          <div className="col-3">
             <Register addUser= {addUser}/>
           </div>
           
-          <div className="col-6">
+          <div className="col-7">
             <List removeUser={removeUser} usuarios={users} />
           </div>
 
