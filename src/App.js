@@ -35,7 +35,7 @@ function App() {
             <Register addUser= {addUser}/>
           </div>
           
-          <div className="col-4">
+          <div className="col-6">
             <List removeUser={removeUser} usuarios={users} />
           </div>
 
