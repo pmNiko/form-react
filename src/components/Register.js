@@ -80,7 +80,7 @@ const Register = ({addUser}) => {
         <>
             <div className="card">
                 <div className="card-header text-center">
-                    Formulario de registro
+                    <strong>Registrarse</strong> 
                 </div>
                 <div className="card-body">                    
                     <form id="form" className="mb-3" onSubmit={register}>
@@ -119,8 +119,8 @@ const Register = ({addUser}) => {
                         </div>
 
                         {/* boton submit */}
-                        <button className="btn btn-primary btn-block">
-                            Guardar <span role="img" aria-label="medal">🏅</span>
+                        <button className="btn btn-outline-primary btn-block">
+                            Guardar
                         </button>
                     </form>
                 </div>
