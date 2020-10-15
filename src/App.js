@@ -25,6 +25,20 @@ function App() {
       )
     }
   }
+  // modificar un usuario
+  const editUser = (nombre,apellido,mail,userId) => {
+    const userE = users.map( user => {
+      if (user.id === userId) {
+        user.nombre= nombre;
+        user.apellido= apellido;
+        user.mail= mail;
+      }
+      console.log(user);
+      return user;
+    });
+
+    setUsers(userE);
+  }
 
   // render del componente principal
   return (
@@ -36,7 +50,11 @@ function App() {
           </div>
           
           <div className="col-7">
-            <List removeUser={removeUser} usuarios={users} />
+            <List 
+              removeUser={removeUser} 
+              editUser={editUser} 
+              usuarios={users} 
+            />
           </div>
 
         </div>
